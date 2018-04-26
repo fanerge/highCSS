@@ -34,7 +34,7 @@
     height: 400px;
     border-radius: 50%;
     background: conic-gradient(#f1462c 0%, #fc5d2c 12.4%, #fff 12.5%, #fff 12.5%, #fc5d2c 12.5%, #fba73e 24.9%, #fff 24.9%, #fff 25%, #fba73e 25%, #e0fa4e 37.4%, #fff 37.4%, #fff 37.5%, #e0fa4e 37.5%, #12dd7e 49.9%, #fff 49.9%, #fff 50%, #12dd7e 50%, #0a6e3f 62.4%, #fff 62.4%, #fff 62.5%);
-    transform: rotate(-112.5deg) scale(0.5);
+    transform: rotate(-112.5deg) scale(0.5) translate(150px,-140px);
     transform-origin: 50% 50%;
 }
 
