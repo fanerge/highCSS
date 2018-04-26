@@ -8,6 +8,7 @@
     width: 0;
 }
 .main>div{
+    position: relative;
     float: left;
     width: 30%;
     height: 40vw;
@@ -19,6 +20,16 @@
     padding: 8px 0;
     text-align: center;
 }
+.main>div section{
+    max-height: 30vw;
+    overflow: hidden;
+}
+.main>div footer {
+    position: absolute;
+    top: 30vw;
+    color: #666;
+}
+
 
 /*background-clip*/
 .background-clip{
