@@ -19,6 +19,8 @@
     padding: 8px 0;
     text-align: center;
 }
+
+/*background-clip*/
 .background-clip{
     font-size: 24px;
     font-weight: bold;
@@ -27,7 +29,8 @@
     -webkit-background-clip: text;
 }
 
-.bg {
+/*conic-gradient*/
+.cg-bg {
     position: relative;
     margin: 50px auto;
     width: 400px;
@@ -38,7 +41,7 @@
     transform-origin: 50% 50%;
 }
 
-.bg::before {
+.cg-bg::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -50,7 +53,7 @@
     background: #fff;
 }
 
-.bg::after {
+.cg-bg::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -65,7 +68,7 @@
         
 }
 
-.point {
+.cg-point {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -77,7 +80,7 @@
     z-index: 999;
 }
 
-.point::before {
+.cg-point::before {
     content: "";
     position: absolute;
     width: 5px;
