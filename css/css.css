@@ -118,3 +118,29 @@
         transform: translate(-50%, -50%) rotate(150deg);
     }
 }
+
+/*波浪-svg版*/
+.svg-live-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
