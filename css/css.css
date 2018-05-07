@@ -127,8 +127,17 @@
     transform: translate(-50%, -50%);
 }
 
-
-
+/*波浪-canvas版*/
+#wave-canvas {
+    box-sizing: content-box;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 10px solid rgba(154, 205, 50, .8); 
+}
 
 
 
