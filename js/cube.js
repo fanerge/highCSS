@@ -49,4 +49,5 @@
         requestAnimationFrame(waveDraw);
     })
 
-})()
+})();
+
