@@ -210,6 +210,54 @@
 	animation: ants 12s linear infinite;
 }
 
+/*frosted-glass*/
+.frosted-glass-content {
+	background: url("http://csssecrets.io/images/tiger.jpg") 0 / cover fixed;
+}
+.frosted-glass {
+	position: relative;
+	padding: 1em;
+	max-width: 15em;
+	color: #ddd;
+	background: hsla(0,0%,100%,.25) border-box;
+	overflow: hidden;
+	border-radius: .3em;
+}
+.frosted-glass-content footer,
+.frosted-glass-content header {
+	color: #f3f3f3 !important;
+}
+.frosted-glass::before {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	top: 0;right: 0;left: 0;bottom: 0;
+	background: red;
+	filter: blur(20px);
+}
+
+/*folded-corner*/
+.folded-corner {
+	width: 8em;
+	height: 8em;
+	padding: 2em;
+	background: #58a;
+	background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, .5) 0) 100% 0 no-repeat,
+	linear-gradient(to left bottom, transparent 1.5em, #58a 0);
+	background-size: 2em 2em, auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
