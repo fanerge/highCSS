@@ -247,10 +247,28 @@
 	background-size: 2em 2em, auto;
 }
 
-
-
-
-
+/*优化checkbox*/
+input[type="checkbox"] + label::before {
+	content: '\a0'; /* 不换行空格 */
+	display: inline-block;
+	vertical-align: .2em;
+	width: .8em;
+	height: .8em;
+	margin-right: .2em;
+	border-radius: .2em;
+	background: silver;
+	text-indent: .15em;
+	line-height: .65;
+}
+input[type="checkbox"]:checked + label::before {
+	content: '\2713';
+	background: yellowgreen;
+}
+/*不能直接display: none;那样会导致tab直接失效*/
+input[type="checkbox"] {
+	position: absolute;
+	clip: rect(0,0,0,0);
+}
 
 
 
