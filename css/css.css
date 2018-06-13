@@ -248,7 +248,7 @@
 }
 
 /*优化checkbox*/
-input[type="checkbox"] + label::before {
+input.recheckbox[type="checkbox"] + label::before {
 	content: '\a0'; /* 不换行空格 */
 	display: inline-block;
 	vertical-align: .2em;
@@ -260,7 +260,7 @@ input[type="checkbox"] + label::before {
 	text-indent: .15em;
 	line-height: .65;
 }
-input[type="checkbox"]:checked + label::before {
+input.recheckbox[type="checkbox"]:checked + label::before {
 	content: '\2713';
 	background: yellowgreen;
 }
@@ -269,14 +269,77 @@ input[type="checkbox"] {
 	position: absolute;
 	clip: rect(0,0,0,0);
 }
+input.recheckbox[type="checkbox"]:focus + label::before {
+	box-shadow: 0 0 .1em .1em #58a;
+}
+input.recheckbox[type="checkbox"]:disabled + label::before {
+	background: gray;
+	box-shadow: none;
+	color: #555;
+}
+/*switch*/
+input.reswitch[type="checkbox"] + label {
+	display: inline-block;
+	padding: .3em .5em;
+	background: #ccc;
+	background-image: linear-gradient(#ddd, #bbb);
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: .3em;
+	box-shadow: 0 1px white inset;
+	text-align: center;
+	text-shadow: 0 1px 1px white;
+}
+input.reswitch[type="checkbox"]:checked + label,
+input.reswitch[type="checkbox"]:active + label {
+	box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+	border-color: rgba(0,0,0,.3);
+	background: #bbb;
+}
 
+/*滚动提示*/
+.scroll-prompt {
+	display: inline-block;
+	overflow: auto;
+	width: 7.2em;
+	height: 7em;
+	border: 1px solid silver;
+	padding: .3em .5em;
+	list-style: none;
+	margin-top: 2em;
+	font: 100 200%/1.6 'Frutiger LT Std', sans-serif;
+	background: linear-gradient(white 15px, hsla(0,0%,100%,0)) 0 0 / 100% 50px,
+	            radial-gradient(at top, rgba(0,0,0,.2), transparent 70%) 0 0 / 100% 15px,
+	            linear-gradient(to top, white 15px, hsla(0,0%,100%,0)) bottom / 100% 50px,
+	            radial-gradient(at bottom, rgba(0,0,0,.2), transparent 70%) bottom / 100% 15px;
+	background-repeat: no-repeat;
+	background-attachment: local, scroll, local, scroll;
+	margin-top: 30px;
+}
+.scroll-prompt::-webkit-scrollbar {
+	display: none;
+}
 
-
-
-
-
-
-
+/*反弹的小球*/
+.animation-ball {
+	min-height: 400px;
+	box-shadow: 0 5px 4px -3px black;
+}
+.animation-ball>div {
+	height: 60px;
+	width: 60px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: radial-gradient(circle at 20px 20px, white 5%, #f25b49);
+	animation: bounce 3s ease-in infinite;
+}
+@keyframes bounce {
+	60%, 80%, to {
+		transform: translateY(360px);
+		animation-timing-function: ease-out;
+	}
+	70% { transform: translateY(240px); }
+	90% { transform: translateY(300px); }
+}
 
 
 
