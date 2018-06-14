@@ -341,5 +341,37 @@ input.reswitch[type="checkbox"]:active + label {
 	90% { transform: translateY(300px); }
 }
 
+/*大字动画*/
+@keyframes typing {
+	from {width: 0;}
+}
+@keyframes caret {
+	50% { border-right-color: transparent; }
+}
+.animation-typing>div {
+	font: bold 200% Consolas, Monaco, monospace;
+	/*width: 8.25em;*/
+	width: 15ch;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: .05em solid;
+	animation: typing 8s steps(15),
+	           caret 1s steps(1) infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
